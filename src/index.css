@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+root {
+  /* @apply dark:text-gray-300; */
+}
+
+body {
+  @apply bg-black font-chakra;
+}
+
+/* HOME BENTO */
+
+.bentobox {
+  @apply xl:grid hidden;
+  grid-template-areas:
+    "rectangle-h rectangle-h box-big box-big rectangle-v"
+    "box-small1 box-small2 box-big box-big rectangle-v";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.bento-element {
+  @apply bg-offwhite dark:bg-dark-gray cursor-pointer rounded-3xl m-3 transition-all hover:scale-105 text-dark-gray dark:text-offwhite;
+}
+
+.bento-element-mobile {
+  @apply bg-offwhite dark:bg-dark-gray rounded-xl py-3 text-dark-gray dark:text-offwhite;
+}
+
+.box-small1 {
+  grid-area: box-small1;
+}
+
+.box-small2 {
+  grid-area: box-small2;
+}
+
+.box-big {
+  grid-area: box-big;
+}
+
+.rectangle-h {
+  grid-area: rectangle-h;
+}
+
+.rectangle-v {
+  grid-area: rectangle-v;
+}
+
+/* ////////////////// */
